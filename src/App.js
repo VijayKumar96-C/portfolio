@@ -1,10 +1,9 @@
-
-
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   return (
     <div >
-      <h>Portfolio</h>
+      <Dashboard/>
     </div>
   );
 }
