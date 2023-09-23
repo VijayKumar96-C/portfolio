@@ -1,9 +1,7 @@
 import { useState } from 'react';
 // @mui
-// import { alpha } from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
-// iconify
-import { Icon } from '@iconify/react';
 // mocks_
 import account from '../mock/account';
 
@@ -39,8 +37,7 @@ export default function AccountPopover() {
 
   return (
     <>
-    <Icon icon="mdi:github" style={{ fontSize: '24px', zIndex:2 }} className='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-av538e-MuiButtonBase-root-MuiIconButton-root' />
-      {/* <IconButton
+      <IconButton
         onClick={handleOpen}
         sx={{
           p: 0,
@@ -58,7 +55,7 @@ export default function AccountPopover() {
         }}
       >
         <Avatar src={account.photoURL} alt="photoURL" />
-      </IconButton> */}
+      </IconButton>
 
       <Popover
         open={Boolean(open)}

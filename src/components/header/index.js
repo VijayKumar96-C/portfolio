@@ -11,6 +11,8 @@ import Searchbar from './Searchbar';
 import AccountPopover from './AccountPopover';
 import LanguagePopover from './LanguagePopover';
 import NotificationsPopover from './NotificationsPopover';
+// iconify
+import { Icon } from '@iconify/react';
 
 // ----------------------------------------------------------------------
 
@@ -24,7 +26,7 @@ const StyledRoot = styled(AppBar)(({ theme }) => ({
   ...bgBlur({ color: theme.palette.background.default }),
   boxShadow: 'none',
   [theme.breakpoints.up('lg')]: {
-    width: `calc(100% - ${NAV_WIDTH + 1}px)`,
+    width: `100vw`,
   },
 }));
 
@@ -57,7 +59,7 @@ export default function Header({ onOpenNav }) {
           <Iconify icon="eva:menu-2-fill" />
         </IconButton>
 
-        <Searchbar />
+        {/* <Searchbar /> */}
         <Box sx={{ flexGrow: 1 }} />
 
         <Stack
@@ -68,8 +70,18 @@ export default function Header({ onOpenNav }) {
             sm: 1,
           }}
         >
-          <LanguagePopover />
-          <NotificationsPopover />
+          {/* <LanguagePopover /> */}
+          {/* <NotificationsPopover /> */}
+          <a href='https://github.com/VijayKumar96-C/'  target="_blank">
+           <Icon icon="mdi:github" style={{ fontSize: '40px', zIndex:2 }} 
+          className='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-av538e-MuiButtonBase-root-MuiIconButton-root'
+           />
+          </a>
+          <a href='https://www.linkedin.com/in/vijay-kumarc/'  target="_blank" >
+            <Icon icon="ant-design:linkedin-filled" style={{ fontSize: '40px', zIndex:2 }}
+          className='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-av538e-MuiButtonBase-root-MuiIconButton-root' />
+          </a>
+          
           <AccountPopover />
         </Stack>
       </StyledToolbar>

@@ -1,15 +1,20 @@
 import React,{ useState } from "react";
+import "../../style.css"
 import Header from '../header'
-// iconify
-import { Icon } from '@iconify/react';
+import InrtoPage from "./IntroPage";
+import DetailsPage from "./DetailsPage";
+
 
 function Dashboard() {
   const [open, setOpen] = useState(false);
 
     return (
-      <div >
-         <Icon icon="mdi:github" style={{ fontSize: '24px', zIndex:2 }} />
-        <Header onOpenNav={() => setOpen(true)} />
+      <div className="dashboard" >
+        <Header onOpenNav={() => setOpen(true)}  />
+        <div>
+        <InrtoPage  />
+        {/* <DetailsPage/> */}
+        </div>
       </div>
     );
   }
